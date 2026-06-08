@@ -327,6 +327,8 @@
       const formData = new FormData(formElement);
       formData.append('date', new Date().toISOString());
       formData.append('source', 'Formulaire GitHub');
+      formData.append('_form_type', 'demande_donnees');
+      formData.append('_subject', '[Demande de données] Nouvelle demande - Observatoire Jacqueville');
       
       try {
         const response = await fetch('https://formspree.io/f/xzdqzqgg', {
